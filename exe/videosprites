@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'video_sprites'
+require 'video_sprites/cli'
+VideoSprites::CLI.start(ARGV)

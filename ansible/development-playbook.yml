@@ -1,0 +1,15 @@
+---
+- hosts: video_sprites
+  become: yes
+  become_method: sudo
+  become_user: root
+  remote_user: root
+  gather_facts: yes
+  roles:
+    - role: basic-setup
+    - role: ffmpeg
+      build_dir: /root/ffmpeg_build
+      source_dir: /root/ffmpeg_sources
+    - role: rvm_io.rvm1-ruby
+      rvm1_rubies:
+        - 2.3.3
