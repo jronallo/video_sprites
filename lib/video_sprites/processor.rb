@@ -47,7 +47,8 @@ module VideoSprites
           x = ((group_index % @options[:columns]) * @options[:width])
           y = (group_index.to_f / @options[:columns].to_f).floor * processed_height
 
-          cue_times = "#{formatted_time(cue_start)}.001 --> #{formatted_time(cue_end)}.000\n"
+          fractional_start = start == 0 ? "000" : "001"
+          cue_times = "#{formatted_time(cue_start)}.#{fractional_start} --> #{formatted_time(cue_end)}.000\n"
           puts cue_times
           cue_text = "#{sprite_filename_base}#xywh=#{x},#{y},#{@options[:width]},#{processed_height}\n\n"
           @webvtt += cue_times
