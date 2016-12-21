@@ -2,4 +2,5 @@
 
 require 'video_sprites'
 require 'video_sprites/cli'
+require 'byebug'
 VideoSprites::CLI.start(ARGV)
