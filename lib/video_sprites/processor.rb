@@ -12,6 +12,7 @@ module VideoSprites
       create_images
       create_sprites
       create_webvtt
+      clean_temporary_directory
     end
 
     def create_temporary_directory
@@ -146,6 +147,10 @@ module VideoSprites
 
       # TODO: format start times to start at .0001
       format("%02d:%02d:%02d", hours, minutes, seconds)
+    end
+
+    def clean_temporary_directory
+      FileUtils.rm_rf @temporary_directory
     end
 
   end
