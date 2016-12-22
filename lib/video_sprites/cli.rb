@@ -7,6 +7,7 @@ module VideoSprites
     option :width,   default: 200, type: :numeric
     option :columns, default: 5,   type: :numeric
     option :group,   default: 20,  type: :numeric
+    option :gif,     default: false, type: :boolean
     def process(input_file, output_directory)
       processor = VideoSprites::Processor.new(input_file, output_directory, options)
       processor.process

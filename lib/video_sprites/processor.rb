@@ -12,6 +12,7 @@ module VideoSprites
       create_images
       create_sprites
       create_webvtt
+      create_gif if @options[:gif]
       clean_temporary_directory
     end
 
@@ -63,6 +64,10 @@ module VideoSprites
       end
     end
 
+    def create_gif
+      `convert -delay 20 -loop 0 #{all_images.join(' ')} #{gif_output_filename}`
+    end
+
     def ffmpeg_cmd
       %Q|ffmpeg -i "#{@input_file}" -vf fps=1/#{@options[:seconds]} #{thumbnail_image_path} |
     end
@@ -84,6 +89,10 @@ module VideoSprites
       File.join @output_directory, "#{basename}.vtt"
     end
 
+    def gif_output_filename
+      File.join @output_directory, "#{basename}.gif"
+    end
+
     def padded_index(index)
       (index + 1).to_s.rjust(5, "0")
     end
@@ -93,7 +102,8 @@ module VideoSprites
         seconds: 10,
         width:   200,
         columns: 5,
-        group:   20
+        group:   20,
+        gif:     false
       }
     end
 
