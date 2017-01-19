@@ -37,6 +37,22 @@ Or create sprites that better match your use case:
 
 You can also make an animated GIF from all the selected frames using the same size as the thumbnails by adding the `--gif` option.
 
+To use the project as a module in your own video processing workflow you can use it like this:
+
+```ruby
+input_file = '/path/to/video.mp4'
+output_directory = '/path/to/tmp/gibraltar2'
+options = {
+  seconds: 10,
+  width: 160,
+  columns: 4,
+  group: 20,
+  gif: false
+}
+processor = VideoSprites::Processor.new(input_file, output_directory, options)
+processor.process
+```
+
 ## Players
 
 The following players provide a way to use WebVTT files and images sprites. Note that the WebVTT and thumbnails provided by VideoSprites may not have been tested in all players. Please file an issue if you find an incompatibility with any player.
