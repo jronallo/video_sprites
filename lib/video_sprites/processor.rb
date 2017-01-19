@@ -65,7 +65,7 @@ module VideoSprites
     end
 
     def create_gif
-      `convert -delay 20 -loop 0 #{all_images.join(' ')} #{gif_output_filename}`
+      `convert -geometry #{@options[:width]}x -delay 20 -loop 0 #{all_images.join(' ')} #{gif_output_filename}`
     end
 
     def ffmpeg_cmd
