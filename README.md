@@ -2,12 +2,12 @@
 
 Creates thumbnail sprite images and a WebVTT metadata file that can be used within several HTML5 video players to show preview thumbnails when hovering over the video time rail.
 
-The initial version [video-sprites](https://github.com/jronallo/video-sprites) was written during an [AMIA](http://www.amianet.org/) hack day by Ashley Blewer, Jay Brown, Jason Ronallo, and Nicholas Zoss. This version improves on the CLI and allows it to be used a module in other projects.
+The initial version [video-sprites](https://github.com/jronallo/video-sprites) was written during an [AMIA](http://www.amianet.org/) hack day by Ashley Blewer, Jay Brown, Jason Ronallo, and Nicholas Zoss. This version improves on the CLI and allows it to be used as a module in other projects.
 
 ## Requirements
 
 - ffmpeg
-- Imagemagick
+- Imagemagick (convert and montage)
 
 ## Installation
 
