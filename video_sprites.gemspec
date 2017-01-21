@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Create video thumbnail sprite sheets}
   spec.description   = %q{Create video thumbnail sprite sheets and WebVTT metadata files for showing thumbnails over video time rail.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/jronallo/video_sprites"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
