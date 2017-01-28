@@ -13,6 +13,9 @@ module VideoSprites
       create_sprites
       create_webvtt
       create_gif if @options[:gif]
+      if @options[:keep_images]
+        move_images
+      end
       clean_temporary_directory
     end
 
@@ -135,7 +138,7 @@ module VideoSprites
 
     # TODO: make basename configurable
     def basename
-      "video"
+      "sprites"
     end
 
     def original_height
@@ -157,6 +160,19 @@ module VideoSprites
 
       # TODO: format start times to start at .0001
       format("%02d:%02d:%02d", hours, minutes, seconds)
+    end
+
+    def move_images
+      FileUtils.mkdir keep_images_directory unless File.exist? keep_images_directory
+      FileUtils.mv Dir.glob(temporary_directory_glob), keep_images_directory
+    end
+
+    def keep_images_directory
+      File.join @output_directory, 'images'
+    end
+
+    def temporary_directory_glob
+      File.join @temporary_directory, '*.jpg'
     end
 
     def clean_temporary_directory

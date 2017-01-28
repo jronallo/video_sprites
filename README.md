@@ -47,7 +47,8 @@ options = {
   width: 160,
   columns: 4,
   group: 20,
-  gif: false
+  gif: false,
+  keep_images: false
 }
 processor = VideoSprites::Processor.new(input_file, output_directory, options)
 processor.process
