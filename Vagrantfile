@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "boxcutter/centos72"
+  config.vm.box = "centos/7"
 
   config.vm.synced_folder '.', '/vagrant' #, type: 'nfs', mount_options: ['nolock', 'rw', 'vers=3', 'tcp', 'actimeo=2']
 
