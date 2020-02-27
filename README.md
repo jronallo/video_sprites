@@ -48,7 +48,8 @@ options = {
   columns: 4,
   group: 20,
   gif: false,
-  keep_images: false
+  keep_images: false,
+  basename: 'filename' #this is optional. If not specificed this will be 'sprite'
 }
 processor = VideoSprites::Processor.new(input_file, output_directory, options)
 processor.process

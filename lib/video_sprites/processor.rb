@@ -136,9 +136,8 @@ module VideoSprites
       @options[:group]
     end
 
-    # TODO: make basename configurable
     def basename
-      "sprites"
+      @options[:basename] ? @options[:basename] : "sprites"
     end
 
     def original_height
