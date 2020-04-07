@@ -49,7 +49,7 @@ options = {
   group: 20,
   gif: false,
   keep_images: false,
-  basename: 'filename' #this is optional. If not specificed this will be 'sprite'
+  basename: 'filename' # Base filename for outputs. Optional; default is "sprites".
 }
 processor = VideoSprites::Processor.new(input_file, output_directory, options)
 processor.process
