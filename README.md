@@ -36,7 +36,7 @@ Try it out with the defaults on one of the test videos in this repository under 
 
 Or create sprites that better match your use case:
 
-`videosprites process test/videos/GibraltarVotesToRemainBritish1967-51sec.mp4 tmp/gibraltar2 --seconds=5 --width=150 --columns=3 --group=6 --basename=newbasename`
+`videosprites process test/videos/GibraltarVotesToRemainBritish1967-51sec.mp4 tmp/gibraltar2 --seconds=5 --width=150 --columns=3 --group=6 --basename=filename`
 
 You can also make an animated GIF from all the selected frames using the same size as the thumbnails by adding the `--gif` option.
 
