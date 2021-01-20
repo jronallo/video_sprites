@@ -72,7 +72,7 @@ module VideoSprites
     end
 
     def ffmpeg_cmd
-      %Q|ffmpeg -i "#{@input_file}" -vf fps=1/#{@options[:seconds]} #{thumbnail_image_path} |
+      %Q|ffmpeg -i "#{@input_file}" -vf "fps=1/#{@options[:seconds]},scale=640x360,pad=640:480:0:60:black" #{thumbnail_image_path} |
     end
 
     def montage_cmd(sprite_slice, index)

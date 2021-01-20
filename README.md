@@ -28,7 +28,6 @@ Or install it yourself as:
 ## Usage
 
 ### Use in Command Line
-
 See usage with: `videosprites help process`
 
 Try it out with the defaults on one of the test videos in this repository under test/videos:
@@ -42,7 +41,6 @@ Or create sprites that better match your use case:
 You can also make an animated GIF from all the selected frames using the same size as the thumbnails by adding the `--gif` option.
 
 ### Use as Gem
-
 To use the project as a module in your own video processing workflow you can use it like this:
 
 ```ruby
