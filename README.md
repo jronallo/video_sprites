@@ -41,10 +41,6 @@ Or create sprites that better match your use case:
 You can also make an animated GIF from all the selected frames using the same size as the thumbnails by adding the `--gif` option.
 
 ### Use as Gem
-<<<<<<< HEAD
-
-=======
->>>>>>> b92aca0ef834d0c8cc4f12bfb768bac00291a3b5
 To use the project as a module in your own video processing workflow you can use it like this:
 
 ```ruby
